@@ -1,0 +1,33 @@
+# EditorConfig is awesome: [^1^][1]
+# 使用 editorconfig 來維持一致的程式碼風格
+
+# 最頂層的 EditorConfig 檔案
+root = true
+
+# Unix-style 換行符號，並在每個檔案的結尾加上換行符號
+[*]
+end_of_line = crlf
+insert_final_newline = true
+
+# 使用 utf-8 編碼
+[*.{tf,tfvars}]
+charset = utf-8
+
+# 使用 4 個空格作為縮排
+[*.tf]
+indent_style = space
+indent_size = 4
+
+# Markdown 檔案不限制行長度，不去除尾部空白
+[*.md]
+max_line_length = 0
+trim_trailing_whitespace = false
+
+# Makefile 使用 Tab 作為縮排
+[Makefile]
+tab_width = 2
+indent_style = tab
+
+# Commit 訊息不限制行長度
+[COMMIT_EDITMSG]
+max_line_length = 0
